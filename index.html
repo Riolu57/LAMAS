@@ -30,6 +30,23 @@
     The rules of the game can be found on the <a href="https://riolu57.github.io/LAMAS/rules">Rules</a> page (also in the header), while the model derivation and a more technical description of the model generation can be found on the <a href="https://riolu57.github.io/LAMAS/model">Model</a> page.
 
 
+     <h1 style="position: center">How to Play</h1>
+
+     To play the game, run main.py. The user interface in the form of a pygame window will show up.
+     The game is played against two models that use epistemic logic to guide their strategy. The game is played as
+     follows: the user always plays first and may pick however many cards from the table and discard an equal number
+     of cards from the hand. Importantly, for each card picked from the table one card must necessarily be discarded
+     from the hand (there must be 6 cards on the table and 4 cards in hand at each point during the game). To pick a
+     card, the user must click on the desired card from the table cards and then click on one card to discard in
+     exchange from the hand cards (the card clicking order is irrelevant as long as one card from the table cards
+     and one card from the hand cards are selected consecutively). The user’s turn can take any amount of time and
+     the only way to end the turn is by clicking on the “Next turn” button on the top left of the screen. In that
+     case, the models make their moves in succession (see description of moves in the center of the screen). After
+     all three players take a turn, the table cards are changed. We automatically check if the user has a Kemps, in
+     which case a new set of hand cards is drawn and the score of the player is increased by 1. At the moment, we do
+     not display the score on screen, but the final result after playing the game can be seen in the Python terminal
+     used to run the game.
+
 </div>
 
 </body>
