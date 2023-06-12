@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kemps!</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+ <ul class="navbar">
+  <li class="navlist"><a class="navbar-entry" href="https://riolu57.github.io/LAMAS/">Home</a></li>
+  <li class="navlist"><a class="navbar-entry" href="https://riolu57.github.io/LAMAS/rules">Rules</a></li>
+  <li class="navlist"><a class="active navbar-entry" href="https://riolu57.github.io/LAMAS/model">Model</a></li>
+  <li class="navlist"><a class="navbar-entry" href="https://riolu57.github.io/LAMAS/team">Team</a></li>
+</ul>
+
+
+ <div class="content">
+
+    <h1 style="position: center">Model</h1>
+
+   We decided to model Kemps! using public announcements. Specifically, every time two cards are swapped, two announcements
+   are made:
+
+   <ol>
+     <li>The discareded card is not being collected by the agent.</li>
+     <li>The picked-up card is being collected by the agent.</li>
+   </ol>
+
+   Further, we implemented two different strategies:
+   <ol>
+     <li>A totally greedy strategy<br>The agent selects the value that is present the most in their first turn.
+     The agent then tries to collect this value.</li>
+     <li>A slightly informed strategy<br>The agent assumes that all cards are being collected by all players,
+     until other evidence turns up. In such a scenario the agent excludes that card from the list of cards being collected
+     by another agent. Then, the agent only considers collecting cards that are not being collected by anyone else.</li>
+   </ol>
+
+</div>
+
+</body>
+</html>
