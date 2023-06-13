@@ -84,6 +84,11 @@
      most frequently occurring number(s) and swaps them out with the least frequently occurring number(s) in their hand
      and on the table.
      <h3 style="text-align: left">KB greedy</h3>
+     Similar to the greedy strategy but this time, the agent keeps a KB and keeps track of which cards are picked and
+     discarded by the other agent. Here the agent only picks up a card number if it is sure that no other agent is
+     collecting that number, i.e., the cards corresponding to that number are either in the discard pile, on the table,
+     or in the agents' hand. If the agent's KB has no knowledge about such cards, then the agent does not pick any cards
+     from the table.
 
      <h3 style="text-align: left">Higher order knowledge and blocking</h3>
 
