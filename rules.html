@@ -50,7 +50,7 @@
         <li> We restrict the game to three players. </li>
         <li> Since the Block Kemps aspect is removed, we still wanted a way for players to block other players from
             achieving Kemps. To do so we implemented a blocking strategy which is explained in
-            <a href="https://riolu57.github.io/LAMAS/Technical_Report">Technical Report</a>. </li>
+            <a href="https://riolu57.github.io/LAMAS/technical_report">Technical Report</a>. </li>
         <li> In our implementation, new table cards are laid out when in three turns, no player has picked a card from
             the table. This mimics the idea that no player wants to pick up the cards from the table during their turn.
             </li>
@@ -58,25 +58,20 @@
 
 We decided to implement the gameplay in Python.
 
-    <h1 style="position: center">Rules</h1>
-
-     The game is played with a single deck of Poker cards without jokers, yielding 52 cards. In our version, three people play the game. <br>
-     At the beginning of the game, each player receives four cards, which only that player can see, henceforth called hand cards.
-     Additionally, 6 cards are displayed face up for all players to see, henceforth called table cards.
-     The goal of the game is to collect four-of-a-kind as often as possible. An example of the game can be seen below: <br> <br>
+     An example of the game can be seen below. The public table cards are visible at the top, while the player's hand cards
+     are shown at the bottom. The face down cards to the right and left of the screen represent the other agents' hand
+     cards. <br> <br>
 
       <p style="text-align: center">
           <img src="game.jpg" alt="Game overview"> <br>
       </p>
 
 
-     As indicated in the middle, it is currently the player's turn. During one's turn, one can swap as many hand and table cards as one wants.
+     As indicated in the middle, it is currently the player's turn. As mentioned before, during one's turn, one can swap as many hand and table cards as one wants.
      For example, the player may have noticed that there are three 9s accessible to the player. Then, the Queen and the 6 for example may be swapped with the two 9s in the table cards.
      <br><br>
 
-     Once all swapping has taken place, it is the next player's turn. <br><br>
-
-     Once a player has collected all four-of-a-kind, they collected a Kemps! and gain a point.
+    As indicated on the top left, clicking the button "Next Turn" finishes one's own turn.
 
 
 </div>

@@ -22,17 +22,19 @@
      <a href="https://github.com/AndreeaMinculescu/LAMAS">https://github.com/AndreeaMinculescu/LAMAS</a> <br><br>
 
     Add general project description.
-    We modeled the card game Kemps! in the context of Epistemic Logic and ....
+    We modeled the card game Kemps! in the context of Epistemic Logic using Public Announcements. Further, three different
+     strategies are modeled and compared with each other in different scenarios. An explanation of how to play the game as a user can be found below.
+     A more detailed descrition of how the game works can be found in <a href="https://riolu57.github.io/LAMAS/rules">Rules</a>.
+     Additionally, for all specifics, please refer to <a href="https://riolu57.github.io/LAMAS/technical_report">Technical Report</a>.
 
      <br>
      <br>
-
-    The rules of the game can be found on the <a href="https://riolu57.github.io/LAMAS/rules">Rules</a> page (also in the header), while the model derivation and a more technical description of the model generation can be found on the <a href="https://riolu57.github.io/LAMAS/technical_report">Technical Report</a> page.
 
 
      <h1 style="position: center">How to Play</h1>
 
-     To play the game, run main.py. The user interface in the form of a pygame window will show up.
+     To play the game, run <a href="https://github.com/AndreeaMinculescu/LAMAS/blob/main/main.py">main.py</a>.
+     The user interface in the form of a pygame window will show up.
      The game is played against two models that use epistemic logic to guide their strategy. The game is played as
      follows: the user always plays first and may pick however many cards from the table and discard an equal number
      of cards from the hand. Importantly, for each card picked from the table one card must necessarily be discarded
@@ -41,8 +43,9 @@
      exchange from the hand cards (the card clicking order is irrelevant as long as one card from the table cards
      and one card from the hand cards are selected consecutively). The user’s turn can take any amount of time and
      the only way to end the turn is by clicking on the “Next turn” button on the top left of the screen. In that
-     case, the models make their moves in succession (see description of moves in the center of the screen). After
-     all three players take a turn, the table cards are changed. We automatically check if the user has a Kemps, in
+     case, the models make their moves in succession (see description of moves in the center of the screen). The cards
+     are only changed if none of the three players change the table cards successively. Therefore, three "skipped" turns
+     lead to new cards. We automatically check if the user has a Kemps, in
      which case a new set of hand cards is drawn and the score of the player is increased by 1. At the moment, we do
      not display the score on screen, but the final result after playing the game can be seen in the Python terminal
      used to run the game.
