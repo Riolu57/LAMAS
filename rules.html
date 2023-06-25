@@ -9,12 +9,54 @@
  <ul class="navbar">
   <li class="navlist"><a class="navbar-entry" href="https://riolu57.github.io/LAMAS/">Home</a></li>
   <li class="navlist"><a class="active navbar-entry" href="https://riolu57.github.io/LAMAS/rules">Rules</a></li>
-  <li class="navlist"><a class="navbar-entry" href="https://riolu57.github.io/LAMAS/model">Model</a></li>
+  <li class="navlist"><a class="navbar-entry" href="https://riolu57.github.io/LAMAS/technical_report">Technical Report</a></li>
   <li class="navlist"><a class="navbar-entry" href="https://riolu57.github.io/LAMAS/team">Team</a></li>
 </ul>
 
 
  <div class="content">
+
+     <h1 style="position: center">Game Explanation</h1>
+
+
+    Traditionally, Kemps is a card game played in pairs with the goal of obtaining four cards of the same number and
+     using a secret signal to get your partner to call out “Kemps!”. If this secret signal is intercepted by an
+     opposing team, one of the team members can call out “Block Kemps!”. If the partner successfully calls out Kemps
+     without Block Kemps, then their team wins a point, otherwise the team who calls out Block Kemps wins a point. If
+     the partner calls out Kemps without their team member having the correct cards, then their team loses a point. The
+     game ends when there are no more groups of four to be made. The winner is the team with the highest number of
+     points. A round ends when a team scores a point. <br><br>
+
+    The game starts by shuffling the cards and dealing four cards to each player. Each player holds a maximum of four
+     cards in his or her hand at any given time.  Then, deal six cards to the middle of the table, face up. At the start
+     of the round, each player can discard a card from their hand and then grab any card from the center of the table.
+     There are no turns; players simply exchange single cards from their hand with cards that show up on the table.
+     Here, to exchange cards means to first pick up a card from the table and then to discard a card from your hand.
+     Once no player wants to pick up the cards from the table, new cards are dealt from the leftover deck, and the
+     previous cards on the table are put into a discard pile. Once the leftover deck runs out of cards, the discard pile
+     acts as the leftover deck and the game goes on until there are no more groups of four to be made. <br><br>
+
+    Kemps is usually played with the standard card deck of 52 cards and two teams of two players. However, we have
+     decided to simplify the gameplay:
+    <ul>
+        <li> We do not have teams in our implementation of Kemps, each player calls out “Kemps!” by themselves. This was
+            done to simplify the implementation of the game since keeping track of secret signals in a computational
+            manner would have been difficult. This means that the Block Kemps aspect of the game is also removed since
+            it is intended to be used in teams. </li>
+        <li> We also decided to remove the no turns aspect of the game and introduced a turn based gameplay so each
+            player will only exchange cards from their hand and the cards on the table when it is their turn. This was
+            done since it would have been difficult to implement reaction times of looking at the card and picking up
+            the card. </li>
+        <li> We restrict the game to three players. </li>
+        <li> Since the Block Kemps aspect is removed, we still wanted a way for players to block other players from
+            achieving Kemps. To do so we implemented a blocking strategy which is explained in
+            <a href="https://riolu57.github.io/LAMAS/Technical_Report">Technical Report</a>. </li>
+        <li> In our implementation, new table cards are laid out when in three turns, no player has picked a card from
+            the table. This mimics the idea that no player wants to pick up the cards from the table during their turn.
+            </li>
+    </ul>
+
+We decided to implement the gameplay in Python.
 
     <h1 style="position: center">Rules</h1>
 

@@ -52,6 +52,7 @@ and (min-device-width : 1000px)  {
 body {
     margin: 0px;
     padding-top: 3rem;
+    padding-bottom: 10rem;
     font-family: 'Roboto', sans-serif;
 }
 
